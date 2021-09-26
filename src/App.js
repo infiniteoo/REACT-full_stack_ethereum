@@ -28,7 +28,9 @@ function App() {
 
   async function setGreeting() {}
 
-  async function requestAccount() {}
+  async function requestAccount() {
+    await window.ethereum.request({ method: "eth_requestAccounts" });
+  }
 
   return (
     <div className="App">
